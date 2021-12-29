@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>🤖 Math Robot Assistent</title>
+
+    <style>
+ 
+      </style>
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/dist/css/estilos.css">
+
+
+    
+    <!-- Custom styles for this template -->
+
+  </head>
+  <body>
+<div class="row d-flex justify-content-center presentation">
+
+  <div class="col-10 col-md-6  ">
+    <p class="presentation">
+      👋 Hi I'm <b>Math Robot Assistent </b> 🤖. <br/>
+      I will <b>calculate</b> and show the <b>formula steps</b> and <b>code</b> for you.
+    </p>
+
+    <div class="subpresentation">
+      What are you going to calculate today?
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5 contenidoboton">
+        <button class="botonselect w-100 btn btn-lg btn-primary">Geometry</button> 
+      </div>
+      <div class="col-md-5 contenidoboton">
+        <button class="botonselect w-100 btn btn-lg btn-primary">Discounts</button> 
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+        <div class="col-md-5 contenidoboton">
+          <button class="botonselect w-100 btn btn-lg btn-primary">Statistics</button> 
+        </div>
+        <div class="col-md-5 contenidoboton">
+          <button class="botonselect w-100 btn btn-lg btn-primary">Analysis</button> 
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+      <form class="needs-validation" novalidate>
+        <h1 class="section h1 mb-3 fw-normal"><b>Geometry</b></h1>
+
+
+
+
+  <main class="form-signin formulario1">
+    <div class="row">
+    <div class="form-signin__icon col-2 col-md-1">
+      <img src = "assets/svg/square.svg" class="icon" alt="Square"/>
+
+    </div>
+    <div class="form-signin__title col-10 col-md-10"><b>Square</b></div>
+    <div class="form-signin__question">How long is each side of your square?</div>
+    <div class="form-signin__note"><i>fractions of up to 10 digits.</i></div>
+  </div>
+<div class="row">
+
+
+    <div class="form-signin__input form-floating col-12 col-md-8">
+      <input step=".0000000001" type="number" class="form-control" id="ladocuadrado"  name="ladocuadrado" placeholder="Side of the square " required>
+      <label for="floatingInput">Side of the square </label>
+      <div class="valid-feedback">
+       Data is perfect!
+      </div>
+      <div class="invalid-feedback">
+       Please enter a side of the square (fractions of up to 10 digits.)
+      </div></div>
+      <div class="col-12 col-md-4">
+        <select class="form-control__select">
+          <option value="cm">cm</option>
+          <option value="inches">inches</option>
+        </select>
+      </div>
+    </div>
+<div class="row">
+  
+<div class="col-6">
+      <button class="form-signin___button button1"><b>Get Perimeter</b></button>
+    </div>
+    <div class="col-6">  
+      <button class="form-signin___button button1"><b>Get Area</b></button>  
+    </div>
+
+   
+
+    </div>  
+ 
+<div class="row">
+  <div id="resultado"></div>
+</div>
+
+</div>
+
+</form>
+  
+</main>
+  </div>
+</div>
+<footer>
+<div class="row">
+  <p class="mt-5 mb-3 text-muted">&copy;       <a href="https://www.fabiansato.com">Fabian Sato</p></a> 
+  </div>
+</footer>
+<!-- script de validacion del form-->
+<script src="formulario.js"></script>
+<script src="cuadrado-perimetro-area.js"></script>
+  </body>
+</html>

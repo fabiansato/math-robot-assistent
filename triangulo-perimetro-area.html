@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>Asistente geométrico Area y perímetro</title>
+
+    <style>
+ 
+      </style>
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/dist/css/estilos.css">
+
+
+    
+    <!-- Custom styles for this template -->
+
+  </head>
+  <body class="text-center">
+<div class="row d-flex justify-content-center">
+
+  <div class="col-10 col-md-6">
+    <main class="form-signin">
+      <form class="needs-validation" novalidate>
+        <iframe src="https://embed.lottiefiles.com/animation/30990"></iframe>
+        <h1 class="h1 mb-3 fw-normal">Calcular el área y perímetro de un cuadrado</b></h1>
+    <b class="h5">* Acepta fracciones de hasta 10 dígitos</b>
+    <div class="formulario">
+        <div class="form-floating">
+          <input step=".0000000001" type="number" class="form-control" id="ladocuadrado"  name="ladocuadrado" placeholder="Lado del cuadrado" required>
+          <label for="floatingInput">Lado de tu cuadrado: </label>
+          <div class="valid-feedback">
+           Dato correcto!
+          </div>
+          <div class="invalid-feedback">
+            Por favor ingrese un número del lado (máximo 10 dígitos luego de la coma)
+          </div>
+        </div>
+    
+    
+    
+        <button class="w-100 btn btn-lg btn-primary">Calcular</button>  </div>
+    <div id="resultado"></div>
+        <p class="mt-5 mb-3 text-muted">&copy; Fabian Sato</p>
+      </form>
+    
+    </main>
+  </div>
+</div>
+
+<!-- script de validacion del form-->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+         
+        }
+        event.preventDefault()
+        form.classList.add('was-validated')
+        console.log(event)
+        obtenerdatos()
+      }, false)
+    })
+})()
+</script>
+
+<script>
+
+  function obtenerdatos(){
+  const input = document.getElementById("ladocuadrado"); //obtiene los datos con getelementbyid
+  const valor = input.value; //guarda ese dato en una variable
+
+
+  var resultado = document.getElementById("resultado").innerHTML; //obtiene y guarda los datos del div resultado
+  
+  var perimetroCuadradoResultado = perimetroCuadrado(valor);
+  var resultadoArea = areaCuadrado(valor);
+  document.getElementById("resultado").innerHTML = "<b>El perímetro del cuadrado es = "+ perimetroCuadradoResultado + "<br />" +
+  "El area del cuadrado es  = " + resultadoArea + " cm<sup>2</sup>";
+  
+  //rellena ese dato con el valor
+  
+}
+
+  function perimetroCuadrado(lado) {
+  return lado * 4;
+}
+
+function areaCuadrado(lado) {
+  return lado * lado;
+}
+
+
+</script>  
+
+  </body>
+</html>
