@@ -145,7 +145,13 @@ footer{
 
 @media (min-width: 768px) {
   .icon{
-    width: 100%;
+
+    width: 230%;
+padding-right: 20px;
   }
 
+}
+
+.subpresentation{
+  padding-bottom: 30px;
 }
